@@ -1,0 +1,110 @@
+body{
+    font-size: 30px;
+    font-weight: normal;
+    display: flex;
+    justify-content: center;
+    background-color: antiquewhite;
+    text-align: center;
+}
+
+
+.quiz{
+    margin-top: 20vh;
+}
+
+.quiz .color{
+    border: 0;
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    margin: auto;
+    position: relative;
+	border-radius: 15%;
+	transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+}
+
+.color:hover{
+    transform: scale(1.02);
+    box-shadow: 0px 1px 20px rgba(136, 136, 136, 0.452);
+}
+
+#rgbValue{
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+}
+#score{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: relative;
+    text-align: center;
+    transform: translateY(-150px);
+    font-weight: 500;
+}
+
+#wrong-screen{
+    width: 100vw;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+}
+
+#wrong-screen .back-drop{
+    background: black;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+}
+
+#wrong-screen button, .score, #correct-box{
+    position: absolute;
+     z-index: 1;
+     left: calc(50% - 175px);
+     width: 350px;
+     top: 40%;
+     text-align: center;
+}
+
+#wrong-screen #correct-box{
+    top : 65vh;
+    color:white;
+}
+
+#wrong-screen .score{
+    margin-top: -25px;
+    font-size: 45px;
+    font-weight: bolder;
+    color: whitesmoke;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#wrong-screen button{
+    background: rgb(218, 214, 214);
+    margin-top: 65px;
+    padding: 0.6rem 1rem;
+    cursor: pointer;
+    border: 0;
+    border-radius: 2rem;
+    font-size: 20px;
+    transition: all 0.2s ease;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#wrong-screen button:hover{
+    background: rgb(114, 180, 114);
+    border: 0;
+    color: whitesmoke;
+}
+
+
+@media(max-width:418px){
+
+    .quiz .color{
+        display: block;
+        margin-bottom: 20px;
+    }
+}
